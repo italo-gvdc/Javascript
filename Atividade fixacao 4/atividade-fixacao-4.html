@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>JavasScript</title>
+		<script>
+			function acionaCampo() {
+
+				document.getElementById('campo').style.background = 'Yellow'
+			}
+
+			function validaCampo() {
+
+			 	var valorCampo = document.getElementById('campo').value
+			 	
+
+			 	if(valorCampo.length < 3) {
+
+			 	document.getElementById('campo').style.background = "red"
+			 	} else {
+
+			 	document.getElementById('campo').style.background = "green"
+
+			 	}
+
+			 	}
+
+ 		</script>
+	</head>
+	<body> 
+		<input id="campo" type="text" onfocus="acionaCampo()" onblur="validaCampo()" />
+	</body>
+</html>
