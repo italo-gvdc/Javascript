@@ -8,41 +8,40 @@
 
 			function adicionarObjetos() {
 
-			
+				//recupera o valor inserido no campo id objeto
 
-			 //recupera o valor inserido no campo id objeto
+				var objeto = document.getElementById('objeto').value
 
-			 var objeto = document.getElementById('objeto').value
+				//caso possua algum valor preenchido entra no if
 
-			 //caso possua algum valor preenchido entra no if
+				if (objeto != '') {
 
-			 if(objeto != '') {
+					//verifica se o valor já não foi inserido anteriormente
+					//se sim, informa que valor já existe, se não insere novo valor
 
-			 //verifica se o valor já não foi inserido anteriormente
-			 //se sim, informa que valor já existe, se não insere novo valor
+					if (objetos.indexOf(objeto) !== -1) {
 
-			 if( objetos.indexOf(objeto) !== -1) {
+						alert('Objeto já foi adicionado')
 
-			 alert('Objeto já foi adicionado')
+					} else {
 
-			 } else {
+						objetos.push(objeto)
+						console.log(objetos)
 
-			 objetos.push(objeto)
-			 console.log(objetos)
-
-			 document.getElementById('objeto').value = ''
-			 }
+						document.getElementById('objeto').value = ''
+					}
 			 
-			 } else {
+			 	} else {
 
-			 alert('Informe um objeto válido')
-			 }
+			 		alert('Informe um objeto válido')
+			 	}
 
-			 }
-			 function ordenarObjetos() {
-			 objetos.sort()
-			 console.log(objetos)
-			 }			
+			}
+
+			function ordenarObjetos() {
+		 		objetos.sort()
+		 		console.log(objetos)
+		 	}			
 		</script>
 	</head>
 	<body> 
