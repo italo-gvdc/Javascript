@@ -1,0 +1,41 @@
+	<head>
+		<meta charset="utf-8">
+		<title>JavasScript</title>
+		<script>
+
+			//throw new  Erro('Houve um erro mas não se preocupe, estamos trabalhando nisso agora !')
+
+			var video = Array()
+
+			video[1] = Array()
+			video[1]['nome'] = 'The Walking Dead'
+			video[1]['categiria'] = 'Serie'
+
+			function getVideo(video) {
+
+				try{
+					//logica
+					//http
+					console.log(video[0]['nome'])
+
+				} catch(e) {
+					console.log('Agora sim podemos tratar esse erro')
+
+				} finally {
+					console.log('Sempre passa por aqui (try / cath)')
+				}
+				
+				console.log('A aplicação morreu')
+			}
+
+
+
+			getVideo(video)
+
+
+		</script>
+	</head>
+	<body> 
+		
+	</body>
+</html>
